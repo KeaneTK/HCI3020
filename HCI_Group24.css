@@ -33,3 +33,32 @@
 	color: white;
 	font-weight: bold;
 }
+
+.main-panel {
+	margin-top: 60px;
+}
+
+.loginButton {
+	width: 258px;
+}
+
+.alert-danger {
+	width: 258px;
+}
+
+.close {
+	padding-top: 8px;
+}
+
+.modal-input {
+	width: 100%;
+}
+
+.btn-edit {
+	background-color: #84D3CC;
+	font-family: 'century gothic';
+}
+
+.btn {
+	font-family: 'century gothic';
+}

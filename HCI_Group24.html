@@ -3,12 +3,14 @@
 <head>
 	<link rel="stylesheet" href="HCI_Group24.css">
 	<script src = "http://code.jquery.com/jquery-2.1.1.min.js"></script>
-	<script src="HCI_Group24.js"></script>
+	<script src = "HCI_Group24.js"></script>
+	<!-- Bootstrap core CSS -->
+	<link href = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 	<title>HCI Group 24</title>
 </head>
 </html>
 
-<div class = "toolbar">
+<div class = "navbar navbar-fixed-top toolbar">
 	<ul>
 		<li><a class="active" href="HCI_Group24.html">HOME</a></li>
 		<li><a href="Schedule.html">SCHEDULE</a></li>
@@ -18,6 +20,18 @@
 	</ul>
 </div>
 
-<div class = "WOD">
-
+<div class="container">
+	<div class="main-panel">
+		<div class="col-md-4">
+			<h2>News</h2>
+			<div id="newsPane"></div>
+		</div>
+		<div class="col-md-4">
+			<h2>Exercise of the day</h2>
+			<div id="exercisePane"></div>
+		</div>
+		<div class="col-md-4">
+			<a class="twitter-timeline" data-lang="en" data-height="800" href="https://twitter.com/umanitoba">Tweets by umanitoba</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+		</div>
+	</div>
 </div>
