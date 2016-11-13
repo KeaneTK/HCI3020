@@ -1,4 +1,9 @@
 function loadNews() {
+	if (sessionStorage.newsJsonStorage == undefined) {
+		sessionStorage.newsJsonStorage = newsJson;
+	} else {
+		newsJson = sessionStorage.newsJsonStorage;
+	}
 	var newsItem = JSON.parse(newsJson);
 	var i = 0;
 	var newsHtml = "";
@@ -8,6 +13,11 @@ function loadNews() {
 	}
 	var div = document.getElementById("newsPane").innerHTML = newsHtml;
 	
+	if (sessionStorage.exerciseJsonStorage == undefined) {
+		sessionStorage.exerciseJsonStorage = exerciseJson;
+	} else {
+		exerciseJson = sessionStorage.exerciseJsonStorage;
+	}
 	var exerciseItem = JSON.parse(exerciseJson);
 	var exerciseHtml = "<h4>" + exerciseItem.exercise.title + "</h4><p>" + exerciseItem.exercise.text + "</p><br/>";
 	document.getElementById("exercisePane").innerHTML = exerciseHtml;
@@ -19,6 +29,7 @@ function saveNews() {
 	var text = document.getElementById("editBody").value;
 	
 	newsJson = newsJson.substring(0, newsJson.length - 2) + ",{\"title\":\"" + title + "\", \"text\":\"" + text + "\"}]}";
+	sessionStorage.newsJsonStorage = newsJson;
 	loadNews();
 	$("#NewsEdit").modal("hide");
 }
@@ -34,6 +45,7 @@ function saveExercise() {
 	var text = document.getElementById("editExercise2").value;
 	
 	exerciseJson = "{\"exercise\":{\"title\":\"" + title + "\", \"text\":\"" + text + "\"}}";
+	sessionStorage.exerciseJsonStorage = exerciseJson;
 	loadNews();
 	$("#ExerciseEdit").modal("hide");
 }

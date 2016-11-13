@@ -5,6 +5,7 @@ function loginClick() {
 	if (names.includes(username)) {
 		var index = names.indexOf(username);
 		if (pass[index] == password) {
+			sessionStorage.name = username;
 			if(username === "Coach" && password === "gym") {
 				window.location.href = "HCI_Group24_Edit.html";
 			} else {
